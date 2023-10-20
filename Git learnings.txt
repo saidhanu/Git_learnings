@@ -1,0 +1,58 @@
+Git config user global
+----------------------------------
+
+$git config --global user.email "GFGexample@gmail.orgg"
+$git config --global user.password "1234321"
+
+To save the credentials forever, type the below command as depicted:
+*******************************************************************
+$ git config --global credential.helper store
+
+
+git initial commit
+-------------------
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/saidhanu/Git_learnings.git
+git push -u origin main
+
+
+push an existing repository from the command line
+***************************************************
+git remote add origin https://github.com/saidhanu/Git_learnings.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+New branch and push
+----------------------
+
+git checkout -b test     	//create new branch and checkout to it.
+git add * 			// To add all files 
+git commit -m "commit message" //commit to local repo
+git push --set-upstream origin test // if default remote/upstream not up.
+
+to push the current branch and set the remote as upstream automatically every time you push,
+ setting push.autoSetupRemote to true in git config once, is enough.
+
+git config --global --add --bool push.autoSetupRemote true
+
+git push 			//to push the updates to remote repo
+
+
+
+To get the updates into current working branch from main/master (Reverse merging).
+----------------------------------------------------------------------------------
+
+<Branch> is clean and just want to update with main or master changes
+
+git checkout <Branch>
+git pull origin <main or master>
+git push origin <Branch>
+
